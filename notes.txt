@@ -1,0 +1,18 @@
+** Folder Structure: ** 
+
+views folder -> Templating files
+routes folder -> Routing files
+public folder -> static files ( CSS, JS ,HTML)
+models folder -> schemas 
+
+--------------------------------------------------------------------
+
+
+** Module 1 development : Authenticaton via passport  **
+
+Things we need : 1) Sessions -> server side storage 
+                    Express sessions 
+
+                 2) Passport -> a) passport
+                                b) strategy: passport local strategy
+                                c) passport local mongoose

@@ -1,0 +1,65 @@
+<%- include("./partials/header")  %> 
+<link rel="stylesheet" href="css/main.css">
+<script src="/socket.io/socket.io.js"></script>
+
+</head>
+<body>
+
+<!-- header ends here -->
+
+<div class="container">
+    <div class="row">
+ 
+        <%- include("./partials/navbar") %>
+
+
+        <script>
+            var currentUser = '<%= user.username   %>'; 
+            console.log(currentUser);
+        </script>
+
+
+
+        
+        <div class="main-container scroll col-10 col-md-7 col-lg-5">
+            <!-- Main content -->
+            <h1 class="fw-bold title-container">Messages</h1>
+
+            <div class="sndMsgContainer">
+                <textarea id="msg-txt-area" name="" id="" cols="30" rows="3" placeholder="Write your msg here.. "></textarea>
+                <button type="submit" class="msg-send-btn"> Send</button>
+            </div>
+
+            <div class="messagesContainer">
+                <ul id="messageList">
+
+                </ul>
+
+            </div>
+
+
+            
+        </div>
+        
+        
+
+        
+        <%- include("./partials/apiSection") %>
+
+
+
+    </div>
+</div>
+
+
+
+
+<!-- for sending and receiving posts -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/js/jQuery.js"></script>
+<script src="/js/common.js"></script>   
+<script src="/js/messages.js"></script>   
+<%- include("./partials/footer")  %> 
+
+
+

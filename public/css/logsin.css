@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+
+
+
+body {
+    background: #7F7FD5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+.container-fluid {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.login-container {
+ 
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    
+}
+
+.loginStyling{
+    border-radius:10px;
+    background-color: #fff;
+    padding: 0px 60px 20px 60px;
+    box-shadow: rgba(110, 108, 108, 0.336) 0px 10px 20px, rgba(119, 117, 117, 0.425) 0px 6px 6px;
+}
+
+
+
+
+
+
+/*//* ----------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+
+.heading-container {
+    height: 100%;
+    font-family: 'Permanent Marker', cursive;
+
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.heading img {
+
+    width: 45%;
+
+}
+
+.heading h1{
+     font-size:3.6rem;
+     color:white;
+     
+}
+
+
+.display-5.mb-3.mt-3.text-center {
+    font-weight: 600;
+    font-size: 34px;
+    color: darkslateblue;
+}
+
+
+
+/* ------------------------------------------------- */
+
+.registerStyling {
+    margin-top: 5rem;
+    border-radius:10px;
+    background-color: #fff;
+    padding: 0px 60px 20px 60px;
+    box-shadow: rgba(110, 108, 108, 0.336) 0px 10px 20px, rgba(119, 117, 117, 0.425) 0px 6px 6px;
+}
+
+
+
+
+/*? RESPONSIVENESS  */
+
+
+@media screen and (max-width: 1023px) {
+    .row {
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .left {
+        width: 60%;
+        
+    }
+    .right {
+        width: 40%;
+    }
+
+    .loginHeading h1{
+        font-weight: 600;
+        font-size: 90%
+    }
+
+    .loginStyling form input{
+        font-size: 13px;
+    }
+
+    form div{
+        font-size: 13px
+    }
+   
+
+    .loginStyling {
+        padding: 10px 30px;
+    }
+
+    /* ---- register */
+
+
+
+    .registerStyling {
+        height: 50%;
+        width: 50%;
+        margin-top: 2rem;
+
+    }
+
+    .registerStyling form div{
+        font-size: 13px
+    }
+
+    .registerStyling form input{
+        font-size:10px;
+    }
+
+    
+}
+
+@media screen and (max-width: 700px) {
+    .row {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left {
+        width: 80%;
+    }
+    .right {
+        width: 40%;
+        margin-top: 10px;
+    }
+
+    .registerStyling {
+        width: 90%;
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 374px) {
+
+    .left {
+        width: 90%;
+    }
+
+    .left button {
+        font-size: 11px;
+      
+    }
+
+    .registerStyling {
+        width: 90%;
+        margin-top: 15px;
+    }
+    
+}

@@ -1,0 +1,127 @@
+<%- include("./partials/header")  %> 
+
+<link rel="stylesheet" href="/css/main.css">
+
+</head>
+<body>
+
+<!-- header ends here -->
+
+
+<div class="container">
+    <div class="row">
+       
+        <%- include("./partials/navbar") %>
+        
+        
+        <div class="main-container scroll col-9 col-md-7 col-lg-5">
+            <!-- Main content -->
+                        <div class="titleContainer">
+
+                            <h1><%=payload.user.firstName%></h1>
+
+                        </div>  
+                    
+                        <div class="profileHeaderContainer">
+                            <div class="coverPhotoSection">
+                                <div class="coverPhotoContainer">
+                                
+                                </div>
+                                <div class="userImageContainer">
+                                    <img src="/images/profile.jpeg" alt="User profile image">
+                                
+                                </div>
+                                
+                            </div>
+
+                            <div class="profileButtonsContainer"></div>
+                            <div class="userDetailsContainer">
+
+                                <span class="displayName"><%=payload.user.firstName%> <%=payload.user.lastName%></span>
+                                <span class="username">@<%=payload.user.username%></span>
+
+                                <% if(currentUser._id !== payload.user._id ) {%> 
+
+                                <!-- <a class ="follow-tag" href="/follow/<%= currentUser._id %>/<%= payload.user._id %>  ">Follow</a> -->
+                                <a 
+                                class ="follow-tag"
+                                style="cursor: pointer;"
+                                >
+                                Follow
+                                </a>
+
+                                <% } %> 
+
+                                <span class="description"></span>
+
+
+                                <script>
+                                    var profileUserId = '<%=payload.user._id%>';
+                                    var currentUserId = '<%=currentUser._id%>';
+                                    // console.log(currentUserId);
+                                </script>
+
+
+                                <div class="followersContainer">
+                                    <a href="/profile/<%=payload.user.username%>/following">
+                                        <span class="value"><%= payload.user.following.length %> </span>
+                                        <span>Following</span>
+                                    </a>
+                                    <a href="/profile/<%=payload.user.username%>/followers">
+                                        <span class="value" id="followersValue"><%= payload.user.followers.length %></span>
+                                        <span>Followers</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tabsContainer">
+                            <a class="tab active" href="/profile/<%=payload.user.username%>">
+                                <span>Posts</span>
+                            </a>
+                            <a class="tab" href="/profile/<%=payload.user.username%>/replies">
+                                <span>Replies</span>
+                            </a>
+                        </div>
+
+                        <div class="pinnedPostContainer" style="display: none;"></div>
+                        <div class="userPostsContainer">
+                            <!-- <span class="noResults">Nothing to show.</span> -->
+                        </div>
+                        
+                    
+                
+
+        
+        </div>    
+
+
+
+        <%- include("./partials/apiSection") %>
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- for sending and receiving posts -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/js/jQuery.js"></script>
+<script src="/js/common.js"></script>   
+<script src="/js/profyl.js"></script>
+<%- include("./partials/footer")  %> 
+
+
+

@@ -12,18 +12,17 @@ router.get('/register', (req,res) => {
 });
 
 //registering the user: 
-router.post('/register', async(req,res) => {
+router.post('/register', async (req,res) => {
 //  console.log(req.body); // this will be undefined if not used enabled parser thorugh express ( by default it is undefined)
    
 try {
 
-    const user = {
+    const user = new User ({
         firstName: req.body.firstname,
         lastName: req.body.lastname,
         email: req.body.email,
         username: req.body.username,
-        profilePicture: req.body.profilePicture
-    }
+    });
 
     const newUser = await User.register(user,req.body.password);
     // res.status(200).send(newUser);

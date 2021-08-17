@@ -270,7 +270,10 @@ function timeDifference(current, previous) {
 
 async function responseOne() {
 
-    let topics = await axios.get('https://newsapi.org/v2/everything?q=apple&from=2021-07-23&to=2021-07-23&sortBy=popularity&apiKey=3f89f906dd2d4cbe83f3d1e42bb338ec')
+    const apikey = '3f89f906dd2d4cbe83f3d1e42bb338ec';
+    const trendUrl = 'https://newsapi.org/v2/everything?domains=wsj.com&apiKey';
+    let topicsWS = await axios.get(`${trendUrl}=${apikey}`)
+    // let topics = await axios.get(process.env.Trend_URL)
 
     // console.log(topics);
 
@@ -309,7 +312,10 @@ responseOne();
     
 async function responseTwo() {
 
-    let topicsWS = await axios.get('https://newsapi.org/v2/everything?domains=wsj.com&apiKey=3f89f906dd2d4cbe83f3d1e42bb338ec')
+    const apikey = '3f89f906dd2d4cbe83f3d1e42bb338ec';
+    const trendUrl = 'https://newsapi.org/v2/everything?domains=wsj.com&apiKey';
+    
+    let topicsWS = await axios.get(`${trendUrl}=${apikey}`)
 
     // console.log(topicsWS);
 

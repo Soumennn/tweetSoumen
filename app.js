@@ -51,6 +51,7 @@ app.use(express.json());
 const authRoutes = require('./routes/authRoutes');
 const profileRoutes = require('./routes/profileRoutes');
 const chatRoutes = require('./routes/chatRoutes');
+const apiRoutes = require('./routes/apiRoutes'); // news api
 
 
 //APIs
@@ -101,7 +102,7 @@ app.get('/', isLoggedIn, (req, res) => {
 app.use(authRoutes);
 app.use(profileRoutes);
 app.use(chatRoutes);
-
+app.use(apiRoutes); //? news-api
 //using APIs
 app.use(postApiRoutes);
 

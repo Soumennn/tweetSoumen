@@ -270,14 +270,19 @@ function timeDifference(current, previous) {
 
 async function responseOne() {
 
-    const apikey = '3f89f906dd2d4cbe83f3d1e42bb338ec';
-    const trendUrl = 'https://newsapi.org/v2/everything?domains=wsj.com&apiKey';
-    let topicsWS = await axios.get(`${trendUrl}=${apikey}`)
+    //* in development mode : 
+    //? const apikey = '3f89f906dd2d4cbe83f3d1e42bb338ec';
+    //? const trendUrl = 'https://newsapi.org/v2/everything?domains=wsj.com&apiKey';
+    //? let topicsWS = await axios.get(`${trendUrl}=${apikey}`)
+
+    //* in production mode : (static data as api usage is restricted)
+    const topicWS = await axios.get(`news/api`);
+    
     // let topics = await axios.get(process.env.Trend_URL)
 
-    // console.log(topics);
+    // console.log(topicWS.data.articles);
 
-    for( let news of topics.data.articles)
+    for( let news of topicWS.data.articles)
     {
         const res = createNewsPost(news);
         $('.newsItems1').prepend(res);
@@ -296,7 +301,7 @@ responseOne();
             <div class="newsPost row">
                 <div class="col-lg-8 newsText">
                     <h6> ${news.title}</h6>
-                    <a href=${news.url}>More</a>
+                    <a href=${news.url} target="_blank" rel="noopener noreferrer">More</a>
                 </div>
                 <div class="col-lg-4 newsImage">
                     <img src=${news.urlToImage} alt="">
@@ -311,11 +316,14 @@ responseOne();
 
     
 async function responseTwo() {
+    //* in development mode : 
+    //? const apikey = '3f89f906dd2d4cbe83f3d1e42bb338ec';
+    //? const trendUrl = 'https://newsapi.org/v2/everything?domains=wsj.com&apiKey';
+    //? let topicsWS = await axios.get(`${trendUrl}=${apikey}`)
 
-    const apikey = '3f89f906dd2d4cbe83f3d1e42bb338ec';
-    const trendUrl = 'https://newsapi.org/v2/everything?domains=wsj.com&apiKey';
-    
-    let topicsWS = await axios.get(`${trendUrl}=${apikey}`)
+
+    //* in production mode : (static data as api usage is restricted)
+    const topicWS = await axios.get(`news/api`);
 
     // console.log(topicsWS);
 
@@ -338,7 +346,7 @@ responseTwo();
             <div class="newsPost row">
                 <div class="col-lg-8 newsText">
                     <h6> ${newsWS.title}</h6>
-                    <a href=${newsWS.url}>More</a>
+                    <a href=${newsWS.url} target="_blank" rel="noopener noreferrer">More</a>
                 </div>
                 <div class="col-lg-4 newsImage">
                     <img src=${newsWS.urlToImage} alt="">

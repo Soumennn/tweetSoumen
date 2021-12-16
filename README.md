@@ -27,9 +27,11 @@ Below are the details regarding the same:
 
 ## Deployment 
 - `Frontend:` Heroku [ via Github ]
-- 'Backend:` Heroku [ via Github ]
+- `Backend:` Heroku [ via Github ]
 - `Database:` MongoDb Atlas
 
 # [APP LINK](https://twitter-soumen-clone.herokuapp.com)
+
+
 
  ----------------------------------------------------------------------------------------------------------------------------------------------------------

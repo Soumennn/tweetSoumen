@@ -3,7 +3,6 @@
 This is a fullstack application for use cases especially in social media platforms.\
 Below are the details regarding the same:
 
-*** Understanding the project structure***
 ## Frontend: 
 - `Languages and styling:` HTML,CSS, Javascript
 - `Libraries / Frameworks:` Bootstrap, fontawesome

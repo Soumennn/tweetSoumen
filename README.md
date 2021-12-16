@@ -30,6 +30,10 @@ Below are the details regarding the same:
 - `Backend:` Heroku [ via Github ]
 - `Database:` MongoDb Atlas
 
+###  Username and Password sample to check the application ( Sample )
+- Username: sameera
+- Password: 111
+
 # [APP LINK](https://twitter-soumen-clone.herokuapp.com)
 
 

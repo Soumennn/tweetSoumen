@@ -19,10 +19,10 @@ Below are the details regarding the same:
 
 ## Application functionalities:
 
-- *** CRUD *** Operations via REST Architecture using Express.Js
-- *** Trends and Current Affairs *** using News API
-- *** Group Chat facilitation *** for authenticated users
-- *** SSR *** rendering of pages using EJS and styling and responsiveness using BootStrap
+- **CRUD** Operations via REST Architecture using Express.Js
+- **Trends and Current Affairs** using News API
+- **Group Chat facilitation** for authenticated users
+- **SSR** rendering of pages using EJS and styling and responsiveness using BootStrap
 - Storing of data and users using MongoDb
 
 ## Deployment 

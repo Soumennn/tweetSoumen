@@ -30,7 +30,7 @@ Below are the details regarding the same:
 - `Backend:` Heroku [ via Github ]
 - `Database:` MongoDb Atlas
 
-####  Username and Password sample to check the application 
+ ### `Username and Password sample to check the application` 
 - Username: sameera
 - Password: 111
 
